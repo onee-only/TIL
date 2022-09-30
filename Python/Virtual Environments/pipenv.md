@@ -4,6 +4,8 @@
 
 ## 설치
 
+> 주의 : python이 설치되어 있어야 한다.
+
 `pip install pipenv`
 
 ## 사용
