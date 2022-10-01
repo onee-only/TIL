@@ -2,11 +2,15 @@
 
 > 가상환경에서 패키지를 관리할 수 있게 해 주는 도구
 
+<br>
+
 ## 설치
 
 > 주의 : python이 설치되어 있어야 한다.
 
 `pip install pipenv`
+
+<br>
 
 ## 사용
 
@@ -33,10 +37,12 @@
 
     `pipenv uninstall [패키지 이름]`
 
+<br>
+
 ## [옵션]
 
 1. ### 설치 옵션
 
-    - --dev
+    - --dev (혹은 -D)
 
         pipfile의 [dev-packages]에 패키지를 추가한다.
