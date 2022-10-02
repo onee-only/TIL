@@ -1,4 +1,4 @@
-# Pipenv
+# pipenv
 
 > 가상환경에서 패키지를 관리할 수 있게 해 주는 도구
 
@@ -36,6 +36,9 @@
     `pipenv install [패키지 이름] [옵션]`
 
     `pipenv uninstall [패키지 이름]`
+
+-   ### 가상환경에서 나간다
+    `exit`
 
 <br>
 
