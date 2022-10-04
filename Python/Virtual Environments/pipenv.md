@@ -46,6 +46,6 @@
 
 1. ### 설치 옵션
 
-    - --dev (혹은 -D)
+    - --dev
 
         pipfile의 [dev-packages]에 패키지를 추가한다.
