@@ -1,8 +1,4 @@
-# Dead Zone
-
-<br>
-
-## Hoisting
+# Hoisting
 
 ```javascript
 console.log(a); // undefined
