@@ -25,3 +25,18 @@ const [mon, tuo, wed] = days;
 ```javascript
 const [mon, tuo, wed, thu = "목"] = days;
 ```
+
+이를 이용하면 다음과 같은 것도 할 수 있다.
+
+```javascript
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+```
+
+```javascript
+const arr = [1, 2, 3, 4, 5];
+
+const [, , third, ,] = arr;
+```
