@@ -96,3 +96,48 @@ a.then((value) => value + " man")
     .catch((e) => console.log("caught"));
 // caught
 ```
+
+## Promise.all
+
+Promise.all은 인수로 주어진 promise들이 모두 끝난 후에 <br>
+모든 value를 가지고 promise를 반환한다.
+
+```javascript
+const a = new Promise((resolve) => {
+    setTimeout(resolve, 50, "a done");
+});
+const b = new Promise((resolve) => {
+    setTimeout(resolve, 150, "b done");
+});
+const c = new Promise((resolve) => {
+    setTimeout(resolve, 30, "c done");
+});
+
+const d = Promise.all([a,b,c]);
+
+d.then(values => console.log(values));
+// [ 'a done', 'b done', 'c done' ]
+```
+
+## Promise.race
+
+Promise.race는 인수로 받은 promise의 배열 중에 <br> 
+가장 빨리 끝나는 promise의 value로 promise를 반환한다.
+
+```javascript
+const a = new Promise((resolve) => {
+    setTimeout(resolve, 50, "a done");
+});
+const b = new Promise((resolve) => {
+    setTimeout(resolve, 150, "b done");
+});
+const c = new Promise((resolve) => {
+    setTimeout(resolve, 30, "c done");
+});
+
+const d = Promise.race([a,b,c]);
+
+d.then(value => console.log(value));
+// 'c done'
+```
+
