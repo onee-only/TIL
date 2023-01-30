@@ -64,6 +64,28 @@ a.then((value) => console.log(value)).catch((value) => console.log(value));
 
 이러면 resolve일 땐 then, reject일 땐 catch를 실행하는 것이 된다.
 
+## finally
+
+finally는 promise가 resolve되든 reject되든 마지막에 실행된다.
+
+```javascript
+const a = new Promise((resolve, reject) => {
+    if (true) {
+        resolve("good");
+    } else {
+        reject("bad");
+    }
+});
+
+a.then((value) => console.log(value))
+    .catch((value) => console.log(value))
+    .finally(() => console.log("done"));
+/*
+good
+done
+*/
+```
+
 ## Promise Chaining
 
 return만 해 준다면, then을 계속 쓸 수 있다.
@@ -113,15 +135,15 @@ const c = new Promise((resolve) => {
     setTimeout(resolve, 30, "c done");
 });
 
-const d = Promise.all([a,b,c]);
+const d = Promise.all([a, b, c]);
 
-d.then(values => console.log(values));
+d.then((values) => console.log(values));
 // [ 'a done', 'b done', 'c done' ]
 ```
 
 ## Promise.race
 
-Promise.race는 인수로 받은 promise의 배열 중에 <br> 
+Promise.race는 인수로 받은 promise의 배열 중에 <br>
 가장 빨리 끝나는 promise의 value로 promise를 반환한다.
 
 ```javascript
@@ -135,9 +157,8 @@ const c = new Promise((resolve) => {
     setTimeout(resolve, 30, "c done");
 });
 
-const d = Promise.race([a,b,c]);
+const d = Promise.race([a, b, c]);
 
-d.then(value => console.log(value));
+d.then((value) => console.log(value));
 // 'c done'
 ```
-
