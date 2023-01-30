@@ -10,18 +10,18 @@ const days = ["월", "화", "수"];
 
 ```javascript
 const mon = days[0];
-const two = days[1];
+const tuo = days[1];
 const wed = days[2];
 ```
 
 혹은 다음과 같이 할 수 있다.
 
 ```javascript
-const [mon, two, wed] = days;
+const [mon, tuo, wed] = days;
 ```
 
 디폴트 값도 물론 가능하다.
 
 ```javascript
-const [mon, two, wed, thu = "목"] = days;
+const [mon, tuo, wed, thu = "목"] = days;
 ```
