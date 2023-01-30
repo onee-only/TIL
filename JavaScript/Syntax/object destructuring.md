@@ -28,7 +28,16 @@ const {
 } = person;
 ```
 
-이렇게 하면 person 안의 favs 안의 food만 빼 오는 것이다.
+이렇게 하면 person 안의 favs 안의 food만 빼 오는 것이다. <br>
+그런데 무조건 food라는 이름으로 해야 할까?
+
+```javascript
+const {
+    favs: { food: favFood },
+} = person;
+```
+
+이제 food가 아닌 favFood이다.
 
 디폴트 값을 설정할 수도 있다.
 
