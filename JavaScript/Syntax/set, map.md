@@ -1,4 +1,4 @@
-# Set
+# Set, Map
 
 <br>
 
@@ -43,3 +43,22 @@ console.log(a); // Set {}
 WeakSet은 Set은 Set인데 조금 다르다.
 
 WeakSet의 요소 중 참조되지 않는 요소는 Garbage Collector가 동작할 때 사라진다.
+
+## Map
+
+Map은 key와 value로 이루어졌다. Set과 비슷하다.
+
+```javascript
+const map = new Map();
+
+map.set("a", 1);
+map.set("b", 2);
+
+console.log(map); // Map { 'a' => 1, 'b' => 2 }
+
+console.log(map.get("a")); // 1
+```
+
+## Weak Map
+
+Weak Set과 비슷하다.
