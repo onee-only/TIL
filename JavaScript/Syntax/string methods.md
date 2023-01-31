@@ -52,3 +52,4 @@ console.log(str.trimEnd());     // "      hello"
 console.log(str.trim());        // "hello"
 ```
 
+마찬가지로 문자열을 반환한다.
