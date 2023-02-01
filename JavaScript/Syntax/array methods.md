@@ -74,3 +74,15 @@ console.log(people.sort(orderPeopleByAge));
 0보다 크면 두번째 매개변수가 더 작다.
 
 그리고 Array.sort는 실제 배열에 영향을 준다.
+
+## .at
+
+인덱스에 있는 값을 가져온다. 반대로도 된다.
+
+```javascript
+const a = [1, 2, 3, 4, 5];
+
+console.log(a[1]);  // 2
+console.log(a.at(1));   // 2
+console.log(a.at(-1));  // 5
+```
