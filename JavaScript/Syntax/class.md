@@ -64,3 +64,69 @@ student.imStudent(); // I'm student. grade: 1
 
 extends를 사용하면 오른쪽 클래스의 모든 것을 상속한다. <br>
 super()를 사용하면 상속받은 클래스의 생성자를 부른다.
+
+## properties
+
+### field declaration
+
+field는 constructor 없이 초기화 할 수 있다.
+
+```javascript
+class Person {
+    name = "person";
+}
+```
+
+### private properties
+
+필드나 메서드 앞에 #를 붙이면 클래스 밖에서 쓸 수 없다.
+
+```javascript
+class Person {
+    #socialSecurityNumber = "111111-1111111";
+    get socialSecurityNumber() {
+        this.#warn();
+        return "SECRET";
+    }
+
+    #warn() {
+        console.log("Do not attemp to access");
+    }
+}
+
+const person = new Person();
+
+console.log(person.#socialSecurityNumber); // 에러
+console.log(person.socialSecurityNumber);
+// Do not attemp to access
+// SECRET
+
+person.#warn(); // 에러
+```
+
+private 필드는 get {이름} 하고 getter를 사용할 수 있다.  
+setter도 똑같다.
+
+### static properties
+
+필드나 메서드 앞에 static을 붙일 수 있다.
+
+```javascript
+class Person {
+    static define() {
+        console.log("I'm Human");
+    }
+
+    static #unreachable() {
+        return "this is unreachable";
+    }
+}
+
+const person = new Person();
+
+Person.define(); // I'm Human
+person.define(); // 에러
+
+Person.#unreachable(); // 에러
+person.#unreachable(); // 에러
+```
