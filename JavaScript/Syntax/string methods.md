@@ -47,9 +47,22 @@ console.log("piz".padEnd(5, "za")); // pizza
 ```javascript
 const str = "     hello    ";
 
-console.log(str.trimStart());   // "hello    "
-console.log(str.trimEnd());     // "      hello"
-console.log(str.trim());        // "hello"
+console.log(str.trimStart()); // "hello    "
+console.log(str.trimEnd()); // "      hello"
+console.log(str.trim()); // "hello"
 ```
 
 마찬가지로 문자열을 반환한다.
+
+## replaceAll
+
+코드로 보는 게 더 쉬울 것 같다.
+
+```javascript
+const a = "abbbc";
+
+const b = a.replaceAll("b", "d");
+
+console.log(a); // "abbbc"
+console.log(b); // "adddc"
+```
